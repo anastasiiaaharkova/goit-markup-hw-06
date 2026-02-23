@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 320px;
     margin: 0 auto;
-    padding: 0;
+    padding: 16px;
 }
 
 h1, h2, h3, p { 
@@ -786,7 +786,6 @@ label input[type="checkbox"]+p {
     top: 0;
     left: 0;
     border: none;
-    border-radius: none;
 
     opacity: 0;
     pointer-events: none;
@@ -875,6 +874,11 @@ label input[type="checkbox"]+p {
     position: relative;
 }
 
+.header {
+    border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+}
+
 .header .burger-button {
     width: 24px;
     height: 24px;
@@ -895,7 +899,6 @@ label input[type="checkbox"]+p {
     right: 16px;
 }
 
-/* Make the burger button itself invisible, let the SVG fill it */
 .burger-button {
     background: none;
     background-color: transparent;
@@ -916,11 +919,6 @@ label input[type="checkbox"]+p {
     display: block;
 }
 
-.header .container {
-    padding: 16px;
-}
-
-   
 
 @media (min-resolution: 291dpi) {
     .first-section {
@@ -964,8 +962,7 @@ label input[type="checkbox"]+p {
         letter-spacing: 0.02em;
         text-align: center;
     }
-
-    .first-section {
+    
 
     /* Make the burger button itself invisible, let the SVG fill it */
     .burger-button {
@@ -987,6 +984,9 @@ label input[type="checkbox"]+p {
         height: 24px;
         display: block;
     }
+
+    .first-section {
+
         font-weight: 700;
         color: #FFFFFF;
         background-color: #2E2F42;
@@ -1640,7 +1640,6 @@ label input[type="checkbox"]+p {
     .header .page-nav .link-active,
     .header .contacts .link {
         display: block;
-        padding: none;
     }
 
     .header .logo {
