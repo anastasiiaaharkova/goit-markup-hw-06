@@ -22,7 +22,14 @@ ul {
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+picture {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .contacts,
@@ -144,6 +151,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 72px;
+    justify-content: center;
 }
 
 .visually-hidden {
@@ -200,7 +208,7 @@ ul {
 
 .team .container .team-members {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 72px;
 }
@@ -264,6 +272,7 @@ ul {
     justify-content: center;
 }
 
+
 .portfolio-section .container {
     padding: 96px 16px;
     background-color: #FFFFFF;
@@ -299,6 +308,7 @@ ul {
     display: flex;
     flex-direction: column;
     max-width: 288px;
+    height: 400px;
 }
 
 .portfolio-section .container .portfolio li .portfolio-content {
@@ -332,6 +342,8 @@ ul {
 .portfolio-img {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: auto;
 }
 
 .overlay {
@@ -901,6 +913,10 @@ label input[type="checkbox"]+p {
         max-width: 768px;
     }
 
+    .footer .container {
+        padding-left: 108px;
+    }
+
     .menu {
         display: none;
     }
@@ -1005,19 +1021,25 @@ label input[type="checkbox"]+p {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 24ppx;
+        column-gap: 24px;
         row-gap: 72px;
     }
 
     .portfolio-section .container .portfolio li {
-        flex: 1 1 calc(50% - 36px);
+        flex: 1 1 calc(50% - 12px);
         max-width: 356px;
-
+        display: flex;
+        flex-direction: column;
     }
 
-    .portfolio img {
-        width: 356px;
-        height: 300px;
+    .portfolio-section .container .portfolio li .portfolio-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolio picture {
+        width: 100%;
+        height: auto;
     }
 
     .footer .container {
@@ -1036,10 +1058,7 @@ label input[type="checkbox"]+p {
         flex-direction: row;
         gap: 24px;
     }
-
-    .footer-text {
-        margin-left: 108px;
-    }
+   
 
     .footer .logo {
         align-self: flex-start;
@@ -1047,6 +1066,10 @@ label input[type="checkbox"]+p {
 
     .footer .social-media p {
         align-self: flex-start;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
     }
 
     .footer .social-media {
@@ -1054,19 +1077,26 @@ label input[type="checkbox"]+p {
     }
 
     .subscribe-form {
-        width: 453px;
         display: flex;
         flex-direction: row;
         gap: 24px;
-        margin-left: 108px;
     }
 
     .subscribe-field {
         gap: 24px;
-        flex-direction: column;
-        width: 453px;
-        height: 80px;
-        margin-left: 108px;
+        flex-direction: row;
+        max-width: 453px;
+    }
+
+    .subscribe {
+        align-items: flex-start;
+    }
+
+    .subscribe .button {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
     }
 
 
@@ -1103,6 +1133,7 @@ label input[type="checkbox"]+p {
     .contacts ul {
         display: flex;
         gap: 40px;
+        padding-right: 16px;
     }
 
     .page-nav .link,
@@ -1114,7 +1145,7 @@ label input[type="checkbox"]+p {
     .header .logo {
         display: flex;
         align-items: center;
-        margin-left: 15px;
+        margin-left: 16px;
         margin-right: 76px;
     }
     
@@ -1545,6 +1576,22 @@ label input[type="checkbox"]+p {
         gap: 40px;
     }
 
+
+    .header .container .contacts ul {
+       display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-right: 140px;
+        padding: 0;
+    }
+
+    .header .container .contacts ul li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
     .header .page-nav .link,
     .header .page-nav .link-active,
     .header .contacts .link {
@@ -1555,7 +1602,7 @@ label input[type="checkbox"]+p {
     .header .logo {
         display: flex;
         align-items: center;
-        margin-left: 15px;
+        margin-left: 140px;
         margin-right: 76px;
     }
 
@@ -1583,15 +1630,17 @@ label input[type="checkbox"]+p {
         overflow: hidden;
     }
 
-    .second-section {
+    .second-section .container {
         padding-top: 120px;
         padding-bottom: 120px;
+        max-width: 1440px;
     }
 
     .second-section .container .features {
         display: flex;
         flex-direction: row;
         gap: 24px;
+        align-items: center;
     }
 
     .second-section .container .features li {
@@ -1601,13 +1650,18 @@ label input[type="checkbox"]+p {
         flex: 1;
         max-width: 264px;
         min-width: 0;
+        justify-content: center;
     }
 
     .second-section .container .features li h3 {
         padding-bottom: 8px;
     }
 
-    .team {
+    .team .container {
+        max-width: 1440px;
+    }
+
+    .team .container {
     padding-top: 120px;
     padding-bottom: 120px;
     }
@@ -1616,12 +1670,17 @@ label input[type="checkbox"]+p {
         text-align: center;
     }
 
+    .team .container .team-members li {
+        max-width: 264px;
+    }
+
     .team .container .team-members {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 24px;
-        padding-top: 72px;
+        margin-top: 72px;
+        justify-content: center;
     }
 
     .team .container .team-members > li {
@@ -1629,7 +1688,6 @@ label input[type="checkbox"]+p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 264px;
         padding: 0;
         box-sizing: border-box;
         border-radius: 0 0 4px 4px;
@@ -1675,6 +1733,11 @@ label input[type="checkbox"]+p {
         display: flex;
         flex-direction: column;
         width: 360px;
+    }
+
+    .portfolio-section .container .portfolio li .portfolio-img {
+        width: 100%;
+        height: auto;
     }
 
     .portfolio-section .container .portfolio li .portfolio-content {
