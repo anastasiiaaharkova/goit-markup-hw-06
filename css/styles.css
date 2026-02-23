@@ -820,11 +820,6 @@ label input[type="checkbox"]+p {
 .menu .link-active {
     color: #404BBF;
 }
-
-.menu {
-    position: absolute;
-}
-
 .menu .page-nav {
     position: absolute;
     top: 72px;
@@ -880,17 +875,45 @@ label input[type="checkbox"]+p {
     position: relative;
 }
 
-.header .burger {
+.header .burger-button {
     width: 24px;
     height: 24px;
-    fill: #2E2F42;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.header .container .burger {
+.header .burger-button .burger {
+    fill: #2E2F42;
+
+}
+
+.header .container .burger-button {
     position: absolute;
     top: 16px;
     right: 16px;
+}
+
+/* Make the burger button itself invisible, let the SVG fill it */
+.burger-button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: inherit;
+}
+
+.burger-button svg {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .header .container {
@@ -943,6 +966,27 @@ label input[type="checkbox"]+p {
     }
 
     .first-section {
+
+    /* Make the burger button itself invisible, let the SVG fill it */
+    .burger-button {
+        background: none;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: inherit;
+    }
+
+    .burger-button svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
         font-weight: 700;
         color: #FFFFFF;
         background-color: #2E2F42;
@@ -1260,7 +1304,7 @@ label input[type="checkbox"]+p {
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14);
     }
-.modal-over
+
     .service-form {
         width: 360px;
         display: flex;
@@ -1960,7 +2004,7 @@ label input[type="checkbox"]+p {
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14);
     }
-.modal-over
+
     .service-form {
         width: 360px;
         display: flex;
