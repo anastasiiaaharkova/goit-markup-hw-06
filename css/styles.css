@@ -23,7 +23,7 @@ ul {
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -1024,28 +1024,6 @@ screen and (min-width: 1158px) and (-webkit-min-device-pixel-ratio: 2) {
         text-align: center;
     }
     
-
-    /* Make the burger button itself invisible, let the SVG fill it */
-    .burger-button {
-        background: none;
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        width: 24px;
-        height: 24px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color: inherit;
-    }
-
-    .burger-button svg {
-        width: 24px;
-        height: 24px;
-        display: block;
-    }
-
     .first-section {
 
         font-weight: 700;
@@ -1104,11 +1082,11 @@ screen and (min-width: 1158px) and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .team {
-        padding: 96px 108px;
+        padding: 96px 0;
     }
 
     .team .container {
-        max-width: 768px;
+        max-width: 584px;
         padding: 0;
     }
 
@@ -1118,11 +1096,12 @@ screen and (min-width: 1158px) and (-webkit-min-device-pixel-ratio: 2) {
         flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 72px;
+        justify-content: center;
     }
 
-    .team .container .team-members>li {
-        flex: 1 1 calc(50% - 12px);
-        width: auto;
+    .team .container .team-members > li {
+        flex: 0 0 264px;
+        width: 264px;
     }
 
     .portfolio-section .container .portfolio {
@@ -1562,7 +1541,7 @@ screen and (min-width: 1158px) and (-webkit-min-device-pixel-ratio: 2) {
         display: none;
     }
 
-    .header .burger {
+    .header .burger-button {
         display: none;
     }
 
