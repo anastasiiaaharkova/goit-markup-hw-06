@@ -586,7 +586,7 @@ footer .socials-link:focus {
     justify-content: center;
 }
 
-.service-form label {
+.service-form label  {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.17;
@@ -709,6 +709,11 @@ label input[type="checkbox"]+p {
     box-shadow: 0 0 0 3px rgba(77, 90, 229, 0.1);
 }
 
+.terms {
+    margin-bottom: 24px;
+    margin-top: 12px;
+}
+
 .privacy-policy {
     color: #8E8F99;
     font-size: 12px;
@@ -754,7 +759,6 @@ label input[type="checkbox"]+p {
 .input-wrapper {
     position: relative;
     margin-bottom: 8px;
-
 }
 
 .service-form p {
@@ -874,6 +878,11 @@ label input[type="checkbox"]+p {
     position: relative;
 }
 
+.header .logo {
+    display: block;
+    padding: 16px 0;
+}
+
 .header {
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
@@ -920,12 +929,19 @@ label input[type="checkbox"]+p {
 }
 
 
-@media (min-resolution: 291dpi) {
+@media screen and (max-width: 767px) and (min-resolution: 192dpi),
+screen and (max-width: 767px) and (min-resolution: 2dppx),
+screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
     .first-section {
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/First-section-background-mobile@2.png);
+            url(../images/First-section-background-mobile@2x.png);
     }
+}
+
+.terms {
+    margin-top: 12px;
+    margin-bottom: 24px;
 }
 
 
@@ -1455,6 +1471,10 @@ label input[type="checkbox"]+p {
         fill: #4D5AE5;
     }
 
+    .portfolio-section .container {
+        background-color: #FFFFFF;
+    }
+
 
 }
 
@@ -1797,16 +1817,29 @@ label input[type="checkbox"]+p {
         margin: 0;
     }
 
-    .footer {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-
     .footer .container {
         margin: 0 auto;
         column-gap: 120px;
         display: flex;
         align-items: baseline;
+    }
+
+    .footer .container {
+    max-width: 1158px;
+    font-weight: 400;
+    color: #F4F4FD;
+    background-color: #2E2F42;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
     }
 
     .footer-text {
@@ -2165,7 +2198,7 @@ label input[type="checkbox"]+p {
     .subscribe-form {
         width: 453px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 16px;
     }
 
