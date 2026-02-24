@@ -172,6 +172,10 @@ ul {
     display: none;
 }
 
+.icon-border {
+    display: none;
+}
+
 .second-section h3 {
     font-weight: 700;
     font-size: 36px;
@@ -213,9 +217,10 @@ ul {
 
 .team .container .team-members {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 72px;
+    flex-direction: column;
+    row-gap: 72px;
+    column-gap: 0;
+    align-items: center;
 }
 
 .team .container .team-members>li {
@@ -265,6 +270,11 @@ ul {
     width: 16px;
     height: 16px;
     fill: #f4f4fd;
+}
+
+.team .socials-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .socials-link {
@@ -1127,7 +1137,7 @@ screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .footer .container {
-        max-width: 552px;
+        max-width: 584px;
         font-weight: 400;
         color: #F4F4FD;
         font-size: 16px;
@@ -1289,8 +1299,8 @@ screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
 
     .contacts {
         display: block;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .header .container .contacts ul li .link {
@@ -1302,6 +1312,24 @@ screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
 
     .header .container {
         padding: 0;
+    }
+
+    /* Tablet header contacts: 16px top/bottom (via centering in 72px row) and 16px from right */
+    .header .container {
+        height: 72px;
+        align-items: center;
+    }
+
+    .header .contacts {
+        margin-left: auto;
+        margin-right: 16px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .header .container .contacts ul {
+        padding-right: 0;
+        row-gap: 12px;
     }
 
     .modal-overlay {
